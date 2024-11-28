@@ -1,5 +1,7 @@
 body {
-    font: Arial, sans-serif;
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-style: normal;
     width: 350px;
     margin-left: 15px;
     margin-right: 20px;
@@ -10,6 +12,12 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+h2 {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
 }
 
 li {
@@ -43,12 +51,13 @@ button {
     margin-top: 10px;
     width: 100%;
     border-radius: 5px;
-    background-color: #807e7e;
+    background-color: #e4e4e4;
     overflow: hidden;
+    margin-bottom: 10px;
 }
 
 #progressBar {
-    height: 10px;
+    height: 15px;
     width: 0;
     background-color: #4caf50;
 }
