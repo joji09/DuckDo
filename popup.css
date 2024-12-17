@@ -27,7 +27,22 @@ li {
     margin-bottom: 10px;
 }
 
-button {
+a {
+    text-decoration: none;
+    color: black;
+}
+
+/* button {
+    margin-left: 5px;
+    padding: 5px 10px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+} */
+
+#addTaskButton {
     margin-left: 5px;
     padding: 5px 10px;
     background-color: #4caf50;
@@ -37,7 +52,31 @@ button {
     cursor: pointer;
 }
 
-#taskInput, #addTaskButton {
+#completebttn {
+    background-color: #4caf50;
+    color: white;
+    border-radius: 3px;
+    cursor: pointer;
+    border: none;
+}
+
+#clearAll {
+    border-radius: 3px;
+    cursor: pointer;
+    border: none;
+    background-color: #4caf50;
+    color: white;
+}
+
+#removebttn {
+    background-color: #4caf50;
+    color: white;
+    border-radius: 3px;
+    cursor: pointer;
+    border: none;
+}
+
+#taskInput, #addTaskButton, #clearAll {
     width: 100%;
     margin-bottom: 10px;
 }
@@ -102,7 +141,7 @@ button {
 #darkmode-toggle:checked + #toggle:after {
     left: 47px;
     transform: translateX(-100%);
-    background: linear-gradient(180deg, #777, #3a3a3a);
+    background: linear-gradient(180deg, #777777, #3a3a3a);
 }
 
 #toggle:active:after{

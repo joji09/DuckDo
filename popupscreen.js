@@ -71,11 +71,13 @@ function renderTasks(){
         link.target = "_blank"; // open in new tab
 
         const completeButton = document.createElement("button");
+        completeButton.setAttribute("id", "completebttn");
         completeButton.textContent = task.completed ? "Undo" : "Complete";
         completeButton.addEventListener("click", () => toggleTaskComplete(index));
 
         // remove button
         const removeButton = document.createElement("button");
+        removeButton.setAttribute("id", "removebttn");
         removeButton.textContent = "Remove";
         removeButton.addEventListener("click", () => removeTasks(index));
 
