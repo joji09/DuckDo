@@ -1,12 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap');
 
-/* body needs more work */
 body {
-    font-family: "Roboto", sans-serif;
+    font-family: "Nunito", sans-serif;
     font-weight: 700;
-    font-style: normal;
     width: 350px;
     margin-left: 15px;
     margin-right: 20px;
+    border-radius: 8px;
     transform: background-color 0.3s, color 0.3s;
 }
 
@@ -14,24 +14,53 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-bottom: 15px;
 }
 
 h2 {
-    font-family: "Roboto", sans-serif;
-    font-weight: 400;
-    font-style: normal;
+    font-size: 18px;
+    font-weight: 500;
+    color: #2c3e50;
 }
 
 li {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-bottom: 10px;
+    padding: 8px;
+    border-radius: 6px;
+    border-color: #121212;
+    background: white;
+    margin-bottom: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    overflow: hidde;
+    white-space: nowrap;
+}
+
+#taskInput {
+    width: calc(100% - 20px);
+    max-width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    outline: none;
+    font-size: 14px;
+    transition: all 0.3s;
+    box-sizing: border-box;
+}
+
+#taskInput:focus {
+    border-color: #4caf50;
+    box-shadow: 0 0 5px rgba(76, 175, 80, 0.3);
 }
 
 a {
     text-decoration: none;
-    color: black;
+    color: #2c3e50;
+    flex: 1;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
 /* button {
@@ -44,8 +73,25 @@ a {
     cursor: pointer;
 } */
 
+button {
+    padding: 8px 12px;
+    border: none;
+    border-radius: 6px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: o.3 ease-in-out; 
+    max-width: 100%;
+}
+
+#addTaskButton, #clearAll {
+    width: 100%;
+    max-width: 100%;
+    background-color: #4caf50;
+    color: white;
+    font-weight: 500;
+}
+
 #addTaskButton {
-    margin-left: 5px;
     padding: 5px 10px;
     background-color: #4caf50;
     color: white;
@@ -54,12 +100,34 @@ a {
     cursor: pointer;
 }
 
+#completebttn, #removebttn {
+    font-size: 12px;
+    padding: 6px;
+    border-radius: 4px;
+    flex-shrink: 0;
+}
+
 #completebttn {
     background-color: #4caf50;
     color: white;
-    border-radius: 3px;
-    cursor: pointer;
-    border: none;
+    margin-right: 10px;
+}
+
+#completebttn:hover {
+    background: #27ae60;
+}
+
+#removebttn {
+    background-color: #4caf50;
+    color: white;
+}
+
+#completebttn:hover {
+    background: #32693a;
+}
+
+#removebttn:hover {
+    background: #c0392b;
 }
 
 #clearAll {
@@ -70,13 +138,6 @@ a {
     color: white;
 }
 
-#removebttn {
-    background-color: #4caf50;
-    color: white;
-    border-radius: 3px;
-    cursor: pointer;
-    border: none;
-}
 
 #taskInput, #addTaskButton, #clearAll {
     width: 100%;
@@ -86,7 +147,10 @@ a {
 #taskList {
     list-style: none;
     padding: 0;
+    margin-top: 10px;
 }
+
+/* Progress Bar */
 
 #progressContainer {
     margin-top: 10px;
@@ -94,13 +158,35 @@ a {
     border-radius: 5px;
     background-color: #e4e4e4;
     overflow: hidden;
-    margin-bottom: 10px;
+    margin-bottom: 8px;
 }
 
 #progressBar {
-    height: 15px;
+    height: 8px;
     width: 0;
     background-color: #4caf50;
+    border-radius: 5px;
+}
+
+/* Dark Mode */
+
+body.dark {
+    background-color: #121212;
+    color: white;
+}
+
+body.dark #taskInput {
+    background: #1e1e1e;
+    color: white;
+    border-color: #4caf50;
+}
+
+body.dark li {
+    background: #1e1e1e;
+}
+
+body.dark #progressContainer {
+    background: #333;
 }
 
 #toggle {
@@ -167,7 +253,7 @@ body.dark #progressContainer {
 }
 
 button:hover {
-    background-color: #45a049;
+    background-color: #3a8c3a;
 }
 
 body.dark button {
