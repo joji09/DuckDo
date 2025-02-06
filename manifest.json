@@ -4,7 +4,7 @@
     "version": "1.0",
     "description": "A simple to-do list that links tasks to the specific URLs or tabs with a progress bar",
     "icons": {
-        "48": "SMALL_DOODLES.png"
+        "48": "Duckdo_icon"
     },
     "permissions": ["tabs", "storage"],
     "browser_action": {
