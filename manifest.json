@@ -1,14 +1,20 @@
 {
     "manifest_version": 2,
-    "name": "DuckDo: Simple To-Do List",
+    "name": "DuckDo",
     "version": "1.0",
     "description": "A simple to-do list that links tasks to the specific URLs or tabs with a progress bar",
     "icons": {
         "48": "Duckdo_icon"
     },
     "permissions": ["tabs", "storage"],
+    "background":{
+        "scripts": ["background.js"]
+    },
+    "sidebar_action": {
+        "default_title": "DUCK LIST",
+        "default_panel": "sidebar.html"
+    },
     "browser_action": {
-        "default_popup": "popup.html",
-        "default_icon": "icon.png"
+        "default_icon": "icon/Duckdo_icon.png"
     }
 }

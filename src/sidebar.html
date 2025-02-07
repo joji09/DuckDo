@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>DUCKWORK</title>
+        <link rel="stylesheet" href="sidebar.css">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <div id="header">
+            <h2>DUCK'S LIST</h2>
+            <label>
+                <input type="checkbox" id="darkmode-toggle">
+                <label for="darkmode-toggle" id="toggle"></label>
+            </label>
+        </div>
+
+        <input type="text" id="taskInput" placeholder="Enter a task">
+        <button id="addTaskButton">Add Task</button>
+
+        <ul id="taskList"></ul>
+
+        <div id="progressContainer">
+            <div id="progressBar"></div>
+        </div>
+
+        <button id="clearAll">Clear</button>
+
+        <script src="sidebar.js"></script>
+    </body>
+</html>
