@@ -15,7 +15,7 @@ browser.storage.local.get("theme").then((data) => {
 darkModeToggle.addEventListener("change", () => {
     const theme = darkModeToggle.checked ? "dark" : "light";
     document.body.className = theme;
-    browser.storage.local.set({ themse });
+    browser.storage.local.set({ theme });
 });
 
 
