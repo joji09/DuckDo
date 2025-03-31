@@ -6,7 +6,7 @@
     "icons": {
         "48": "Duckdo_icon"
     },
-    "permissions": ["tabs", "storage"],
+    "permissions": ["tabs", "storage", "sidebar_action"],
     "background":{
         "scripts": ["background.js"]
     },

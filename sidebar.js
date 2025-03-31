@@ -15,7 +15,7 @@ browser.storage.local.get("theme").then((data) => {
 darkModeToggle.addEventListener("change", () => {
     const theme = darkModeToggle.checked ? "dark" : "light";
     document.body.className = theme;
-    browser.storage.local.set({ themse });
+    browser.storage.local.set({ theme });
 });
 
 let tasks = [];
@@ -50,7 +50,7 @@ function renderTasks(){
         const removeButton = document.createElement("button");
         removeButton.setAttribute("id", "removebttn");
         removeButton.textContent = "Remove";
-        removeButto.addEventListener("click", () => removeTasks(index));
+        removeButton.addEventListener("click", () => removeTasks(index));
 
         li.appendChild(link);
         li.appendChild(completeButton);
@@ -73,8 +73,28 @@ function removeTasks(index){
     updateProgress();
 }
 
-addTaskButton.addEventListener("click", () => {
-    const taskText = taskInput.value;
+// addTaskButton.addEventListener("click", () => {
+//     const taskText = taskInput.value;
+//     if(!taskText) return;
+
+//     const task = {text: taskText, url: null, completed: false};
+
+//     browser.tabs.query({active: true, currentWindow: true }).then((tabs) => {
+//         task.url = tabs[0].url;
+//         tasks.push(task);
+//         saveTasks();
+//         renderTasks();
+//         updateProgress();
+//     });
+
+//     taskInput.value = ""; // this clears input
+// });
+
+// testing 'Enter' to add tasks
+
+taskInput.addEventListener("keydown", (evt) =>{
+    if (evt.code === 'Enter'){
+        const taskText = taskInput.value;
     if(!taskText) return;
 
     const task = {text: taskText, url: null, completed: false};
@@ -88,7 +108,16 @@ addTaskButton.addEventListener("click", () => {
     });
 
     taskInput.value = ""; // this clears input
-});
+    }
+})
+
+
+function toggleTaskComplete(index) {
+    tasks[index].completed = !tasks[index].completed;
+    saveTasks();
+    renderTasks();
+    updateProgress();
+}
 
 clearAll.addEventListener("click", () => {
     if (confirm("Do you want to clear all tasks?")){
